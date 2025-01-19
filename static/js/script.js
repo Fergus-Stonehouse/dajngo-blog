@@ -1,1 +1,0 @@
-console.log("Vasquez whipped round with her smartgun and roared 'Lets rock!'");
