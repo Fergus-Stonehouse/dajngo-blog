@@ -5,7 +5,13 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-
+    """
+    Add Post to Admin panel with Summernote
+    
+    **Context**
+    ``post``
+        The most recent instance of :model:`post.post`
+    """
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on')

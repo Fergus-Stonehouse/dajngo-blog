@@ -5,6 +5,13 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Add About to Admin panel with Summernote
+    
+    **Context**
+    ``about``
+        The most recent instance of model::`about.About`
+    """
     summernote_fields = ('content',)
 
 # Note: admin.ModelAdmin is the standard way of registering
@@ -16,5 +23,11 @@ class AboutAdmin(SummernoteModelAdmin):
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
-
+    """
+    Add CollaborateRequest to Admin panel
+    
+    **Context**
+    ``CollaborateRequest``
+        Include the CollaborateRequest to the Admin panel
+    """
     list_display = ('message', 'read',)
