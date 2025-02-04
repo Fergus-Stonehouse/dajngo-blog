@@ -75,8 +75,8 @@
 
           <!-- Adding the Edit and Delete Buttons  -->
           {% if user.is_authenticated and comment.author == user %}
-            <button class="btn btn-delete" data-comment_id="{{ data-comment.id }}">Delete</button>
-            <button class="btn btn-edit" data-comment_id="{{ data-comment.id }}">Edit</button>
+            <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+            <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
           {% endif %}
 
         </div>
